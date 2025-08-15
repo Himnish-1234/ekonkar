@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ek Onkar Buildtech — Construction • Renovations • Interiors & Exteriors | Meerut</title>
+<meta name="description" content="Ek Onkar Buildtech in Meerut: new houses, duplexes, flats, premium renovations, interiors & exteriors — on time and within budget." />
+<meta name="theme-color" content="#000000" />
+
+<!-- Fonts (optional) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0a0a0a;       /* black */
+    --panel:#101010;    /* deep black panel */
+    --gold:#d4af37;     /* classic gold */
+    --gold-2:#f5d26a;   /* soft gold */
+    --muted:#b9b9b9;    /* muted text */
+    --ink:#f5f5f5;      /* light text */
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1100px,92%);margin:0 auto}
+  /* Gold accent utilities */
+  .gold{color:var(--gold)}
+  .gold-grad{background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:#000000cc;border-bottom:1px solid #1f1f1f;backdrop-filter:saturate(140%) blur(10px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+  .brand{display:flex;align-items:center;gap:.7rem}
+  .brand__mark{width:40px;height:40px;border-radius:12px;background:#141414;border:1px solid #2a2a2a;display:grid;place-items:center;box-shadow:inset 0 0 0 1px #000}
+  .brand__mark svg{width:26px;height:26px;filter:drop-shadow(0 2px 6px rgba(212,175,55,.35))}
+  .brand__name{font-weight:800;letter-spacing:.5px}
+  .nav__links{display:flex;gap:1rem;align-items:center}
+  .nav__links a{padding:.55rem .8rem;border-radius:10px;color:var(--muted);font-weight:600}
+  .nav__links a:hover{color:var(--ink);background:#161616}
+  .nav__cta{border:1px solid var(--gold);color:var(--gold);padding:.55rem .9rem;border-radius:12px}
+  .nav__toggle{display:none}
+
+  /* Hero */
+  .hero{background:
+    radial-gradient(1000px 500px at 80% -10%, rgba(212,175,55,.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(245,210,106,.08), transparent 60%),
+    #0a0a0a;}
+  .hero__inner{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:4.5rem 0}
+  .eyebrow{display:inline-block;color:var(--muted);border:1px solid #262626;border-radius:999px;padding:.35rem .7rem;margin-bottom:.7rem;font-weight:600}
+  h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.12;margin:.2rem 0 .6rem}
+  .hero p{color:#d8d8d8;margin:0 0 1.2rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;padding:.9rem 1.1rem;border-radius:14px;border:1px solid #2a2a2a;background:#121212}
+  .btn--gold{border-color:var(--gold);background:linear-gradient(135deg, #1a1a1a, #0f0f0f);color:var(--gold)}
+  .features{display:grid;gap:.6rem;margin-top:1rem}
+  .features li{list-style:none;color:#c9c9c9}
+
+  /* Sections */
+  section{padding:4rem 0;border-top:1px solid #121212}
+  section h2{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,3vw,2.2rem);margin:0 0 .4rem}
+  section p.lead{color:#c7c7c7;margin:0 0 1.6rem}
+
+  /* Services */
+  .grid{display:grid;gap:1.2rem}
+  .grid--3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--panel);border:1px solid #1f1f1f;border-radius:18px;padding:1.2rem}
+  .card h3{margin:.15rem 0 .35rem}
+  .pill{display:inline-block;border:1px solid #2c2c2c;border-radius:999px;padding:.28rem .6rem;color:#bcbcbc;font-weight:600;font-size:.78rem}
+
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .shot{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1d1d1d;background:#0f0f0f;min-height:160px}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block;opacity:.95;transition:transform .5s ease, opacity .5s}
+  .shot:hover img{transform:scale(1.04);opacity:1}
+  .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, transparent, rgba(0,0,0,.35));pointer-events:none}
+
+  /* Contact */
+  .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem}
+  .box{background:var(--panel);border:1px solid #1f1f1f;border-radius:18px;padding:1.2rem}
+  .contact ul{margin:.4rem 0 0;padding:0;list-style:none}
+  .contact li{margin:.35rem 0}
+  .cta-row{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.9rem}
+  .btn--outline{border-color:#2a2a2a;color:#e8e8e8}
+
+  footer{padding:2rem 0;color:#a7a7a7}
+
+  /* Mobile */
+  @media (max-width: 960px){
+    .hero__inner,.contact{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .grid--3{grid-template-columns:1fr}
+    .nav__links{display:none;position:absolute;right:1rem;top:60px;background:#0d0d0d;border:1px solid #1f1f1f;border-radius:12px;flex-direction:column;padding:.6rem}
+    .nav__links.open{display:flex}
+    .nav__toggle{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .7rem;border:1px solid #1f1f1f;border-radius:10px;background:#0d0d0d;color:#eaeaea}
+  }
+</style>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Ek Onkar Buildtech",
+  "email":"mailto:ekonkarbuildtech@gmail.com",
+  "telephone":"+91-9897205094",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1st Floor, Gaushala Market, Baghpat Gate, Near Metro Plaza",
+    "addressLocality":"Meerut",
+    "addressRegion":"UP",
+    "addressCountry":"IN"
+  },
+  "areaServed":"Meerut",
+  "url":"",
+  "priceRange":"₹₹",
+  "description":"Construction company in Meerut providing new home builds, duplexes, flats, renovations, interiors and exteriors."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Ek Onkar Buildtech">
+      <div class="brand__mark" aria-hidden="true">
+        <!-- Minimal Ek Onkar symbol as SVG (gold). Replace with your logo.png if you prefer -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d4af37"/><stop offset="1" stop-color="#f5d26a"/></linearGradient></defs>
+          <circle cx="32" cy="32" r="30" fill="none" stroke="url(#g)" stroke-width="2"/>
+          <text x="50%" y="58%" text-anchor="middle" font-size="32" fill="url(#g)" font-family="serif">ੴ</text>
+        </svg>
+      </div>
+      <div class="brand__name gold-grad">Ek Onkar Buildtech</div>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav__links').classList.toggle('open')">☰ Menu</button>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="container hero__inner">
+      <div>
+        <span class="eyebrow">Premium Construction • Meerut</span>
+        <h1>Black & Gold Excellence in <span class="gold-grad">Construction</span></h1>
+        <p>We build new houses, duplexes, and flats — and transform spaces with elegant renovations plus interior & exterior solutions.</p>
+        <ul class="features">
+          <li>✓ New Home Construction (Houses • Duplexes • Flats)</li>
+          <li>✓ Renovations & Remodeling</li>
+          <li>✓ Interiors & Exteriors</li>
+        </ul>
+        <div class="cta-row" style="margin-top:1.1rem">
+          <a class="btn btn--gold" href="https://wa.me/919897205094?text=Hi%20Ek%20Onkar%20Buildtech%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener">WhatsApp Vishal</a>
+          <a class="btn btn--outline" href="#projects">View Projects</a>
+        </div>
+      </div>
+      <div>
+        <!-- Replace with a hero image if you have one -->
+        <div style="aspect-ratio:4/3;border-radius:18px;border:1px solid #1d1d1d;background:
+        radial-gradient(600px 300px at 70% 20%, rgba(212,175,55,.15), transparent 60%),
+        linear-gradient(135deg,#0f0f0f,#161616);display:grid;place-items:center;color:#cfcfcf">
+          <strong style="color:#e6e6e6">Add your project photo here (images/hero.jpg)</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="About">
+    <div class="container">
+      <h2 class="gold-grad">About Us</h2>
+      <p class="lead">Construction is more than bricks and mortar — it’s about creating spaces that inspire and last a lifetime.</p>
+      <p>Founded on craftsmanship and integrity, Ek Onkar Buildtech delivers residential projects that combine function, aesthetics, and durability. We partner closely with clients to ensure every detail reflects their vision and budget.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-label="Services">
+    <div class="container">
+      <h2 class="gold-grad">Our Services</h2>
+      <p class="lead">End-to-end construction & design solutions.</p>
+      <div class="grid grid--3">
+        <div class="card">
+          <span class="pill">New Construction</span>
+          <h3 class="gold">Houses, Duplexes & Flats</h3>
+          <p>From layout to finishing — modern designs, quality materials, and on-time delivery.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Upgrades</span>
+          <h3 class="gold">Renovations & Remodeling</h3>
+          <p>Transform kitchens, bathrooms, and living areas with smart, value-adding upgrades.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Design</span>
+          <h3 class="gold">Interiors & Exteriors</h3>
+          <p>Elegant interior and exterior finishes that blend beauty with long-term durability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <h2 class="gold-grad">Projects</h2>
+      <p class="lead">Showcase your work. Replace the image paths with your photos in the <code>images/</code> folder.</p>
+      <div class="gallery">
+        <!-- Replace src with your files: images/duplex1.jpg, flat1.jpg, reno1.jpg, etc. -->
+        <div class="shot"><img src="images/project-1.jpg" alt="Project 1"></div>
+        <div class="shot"><img src="images/project-2.jpg" alt="Project 2"></div>
+        <div class="shot"><img src="images/project-3.jpg" alt="Project 3"></div>
+        <div class="shot"><img src="images/project-4.jpg" alt="Project 4"></div>
+        <div class="shot"><img src="images/project-5.jpg" alt="Project 5"></div>
+        <div class="shot"><img src="images/project-6.jpg" alt="Project 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact">
+    <div class="container contact">
+      <div class="box">
+        <h2 class="gold-grad">Contact Us</h2>
+        <p class="lead">Call, WhatsApp, or email — we’ll get back quickly.</p>
+        <ul>
+          <li><strong class="gold">Address:</strong> 1st Floor, Gaushala Market, Baghpat Gate, Near Metro Plaza, Meerut</li>
+          <li><strong class="gold">Phone:</strong> <a href="tel:+919897205094">Vishal — 9897205094</a></li>
+          <li><strong class="gold">Phone:</strong> <a href="tel:+919897434241">Sachin — 9897434241</a></li>
+          <li><strong class="gold">Phone:</strong> <a href="tel:+919897048481">Vivek — 9897048481</a></li>
+          <li><strong class="gold">Email:</strong> <a href="mailto:ekonkarbuildtech@gmail.com">ekonkarbuildtech@gmail.com</a></li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn--gold" href="https://wa.me/919897205094?text=Hi%20Ek%20Onkar%20Buildtech%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:ekonkarbuildtech@gmail.com?subject=Project%20Enquiry%20-%20Ek%20Onkar%20Buildtech">Email</a>
+          <a class="btn btn--outline" href="tel:+919897205094">Call Now</a>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="gold">Quick Query</h3>
+        <!-- mailto keeps it simple (opens user's email app) -->
+        <form action="mailto:ekonkarbuildtech@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="Name" required
+            style="display:block;width:100%;margin:.35rem 0 1rem;padding:.75rem;border:1px solid #242424;border-radius:10px;background:#0f0f0f;color:#eaeaea" />
+          <label for="phone">Phone</label>
+          <input id="phone" name="Phone" required
+            style="display:block;width:100%;margin:.35rem 0 1rem;padding:.75rem;border:1px solid #242424;border-radius:10px;background:#0f0f0f;color:#eaeaea" />
+          <label for="msg">Message</label>
+          <textarea id="msg" name="Message" rows="4"
+            style="display:block;width:100%;margin:.35rem 0 1rem;padding:.75rem;border:1px solid #242424;border-radius:10px;background:#0f0f0f;color:#eaeaea"></textarea>
+          <button class="btn btn--gold" type="submit">Send Enquiry</button>
+        </form>
+        <p style="font-size:.85rem;color:#a9a9a9;margin-top:.6rem">By submitting, you agree to be contacted about your project.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem">
+    <div>© <span id="yr"></span> Ek Onkar Buildtech. All rights reserved.</div>
+    <div><a href="#home">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
